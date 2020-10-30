@@ -1,0 +1,26 @@
+digraph G {
+node [shape=box];
+"base" [label="base"];
+"art1" [label="art1"];
+"art2" [label="art2"];
+"art3" [label="art3"];
+"art4" [label="art4"];
+"art5" [label="art5"];
+"art6" [label="art6"];
+"gripper" [label="gripper"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base" -> "art1_yaw" [label="xyz: 0 0 0.104 \nrpy: 0 -0 0"]
+"art1_yaw" -> "art1"
+"art1" -> "art2_pitch" [label="xyz: 0 -0.0318752 0.0974304 \nrpy: 0 -1.5708 1.5708"]
+"art2_pitch" -> "art2"
+"art2" -> "art3_pitch" [label="xyz: 0.16 0 0 \nrpy: 0 -0 0"]
+"art3_pitch" -> "art3"
+"art3" -> "art4_roll" [label="xyz: 0.0885 0 -0.035 \nrpy: 0 1.5708 -0"]
+"art4_roll" -> "art4"
+"art4" -> "art5_pitch" [label="xyz: 0 0 0.1 \nrpy: 0 -1.5708 0"]
+"art5_pitch" -> "art5"
+"art5" -> "art6_roll" [label="xyz: 0 0 0 \nrpy: 0 1.5708 -0"]
+"art6_roll" -> "art6"
+"art6" -> "gripper_action" [label="xyz: 0 0 0 \nrpy: 0 1.5708 -0"]
+"gripper_action" -> "gripper"
+}
